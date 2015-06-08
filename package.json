@@ -1,21 +1,21 @@
 {
-  "name": "HandlebarsHelperSpike",
+  "name": "gulp-handlebars-precompile-task",
   "version": "1.0.0",
-  "description": "Creating custom Handlebars.js helpers",
+  "description": "Using Gulp to bundle JS + precompile Handlebars templates.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code-for-coffee/HandlebarsHelperSpike.git"
+    "url": "https://github.com/code-for-coffee/gulp-handlebars-precompile-task.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/code-for-coffee/HandlebarsHelperSpike/issues"
+    "url": "https://github.com/code-for-coffee/gulp-handlebars-precompile-task/issues"
   },
-  "homepage": "https://github.com/code-for-coffee/HandlebarsHelperSpike",
+  "homepage": "https://github.com/code-for-coffee/gulp-handlebars-precompile-task",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-compile-handlebars": "^0.5.0",

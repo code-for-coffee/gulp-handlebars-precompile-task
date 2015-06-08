@@ -19,13 +19,13 @@ gulp.task('templates', function () {
           namespace: 'hhspike.templates',
           noRedeclare: true, // Avoid duplicate declarations
       }))
-      .pipe(concat('templates.js'))
+      .pipe(concat('production-templates.js'))
       .pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', function () {
-    return gulp.src(['bower_components/handlebars/handlebars.runtime.js', 'dist/templates.js', 'app/app.js', 'models/annotationModel.js'])
-      .pipe(concat('bundle.js'))
+    return gulp.src(['bower_components/handlebars/handlebars.runtime.js', 'dist/production-templates.js', 'app/*.js', 'models/*.js'])
+      .pipe(concat('production-app.js'))
       .pipe(uglify())
       .pipe(gulp.dest('dist/'));
 });
