@@ -1,0 +1,19 @@
+{
+  "name": "HandlebarsHelperSpike",
+  "version": "1.0.0",
+  "description": "Creating custom Handlebars.js helpers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-for-coffee/HandlebarsHelperSpike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code-for-coffee/HandlebarsHelperSpike/issues"
+  },
+  "homepage": "https://github.com/code-for-coffee/HandlebarsHelperSpike"
+}
