@@ -18,6 +18,7 @@
   "homepage": "https://github.com/code-for-coffee/HandlebarsHelperSpike",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-compile-handlebars": "^0.5.0"
+    "gulp-compile-handlebars": "^0.5.0",
+    "gulp-rename": "^1.2.2"
   }
 }
