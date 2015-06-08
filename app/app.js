@@ -1,6 +1,7 @@
 var hhspike = hhspike || {};
 hhspike.models = hhspike.models || {};
 hhspike.templates = handlebars.templates;
+hhpsike.dom = document.getElementById("body");
 
 // configure
 Handlebars.registerHelper(':', function(context, options) {
@@ -14,3 +15,5 @@ Handlebars.registerHelper(':', function(context, options) {
       + options.fn(this)
       + '</span>');
 });
+
+hhspike.dom.innerHTML = "test";

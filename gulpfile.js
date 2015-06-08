@@ -1,26 +1,31 @@
 var gulp = require('gulp');
-var handlebars = require('gulp-compile-handlebars');
-var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
-gulp.task('default', function () {
-    var templateData = {
-        firstName: 'Kaanon'
-    },
-    options = {
-        ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
-        partials : {
-            footer : '<footer>the end</footer>'
-        },
-        batch : ['./src/partials'],
-        helpers : {
-            capitals : function(str){
-                return str.toUpperCase();
-            }
-        }
-    }
+gulp.task('default', ['templates','scripts'], function () {
 
-    return gulp.src('src/hello.handlebars')
-        .pipe(handlebars(templateData, options))
-        .pipe(rename('hello.html'))
-        .pipe(gulp.dest('dist'));
+});
+
+var handlebars = require('gulp-handlebars');
+var wrap = require('gulp-wrap');
+var declare = require('gulp-declare');
+var concat = require('gulp-concat');
+
+gulp.task('templates', function () {
+    gulp.src('templates/*.hbs')
+      .pipe(handlebars())
+      .pipe(wrap('Handlebars.template(<%= contents %>)'))
+      .pipe(declare({
+          namespace: 'hhspike.templates',
+          noRedeclare: true, // Avoid duplicate declarations
+      }))
+      .pipe(concat('templates.js'))
+      .pipe(gulp.dest('dist'));
+});
+
+gulp.task('scripts', function () {
+    return gulp.src(['bower_components/handlebars/handlebars.runtime.js', 'dist/templates.js', 'app/app.js', 'models/annotationModel.js'])
+      .pipe(concat('bundle.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/'));
 });
