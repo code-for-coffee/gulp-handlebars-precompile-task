@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/code-for-coffee/HandlebarsHelperSpike/issues"
   },
-  "homepage": "https://github.com/code-for-coffee/HandlebarsHelperSpike"
+  "homepage": "https://github.com/code-for-coffee/HandlebarsHelperSpike",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compile-handlebars": "^0.5.0"
+  }
 }
