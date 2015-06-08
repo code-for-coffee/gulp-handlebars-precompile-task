@@ -7,4 +7,4 @@
 
 ## Information
 - `gulpfile.js` dictates where files are read from and saved to. Update that for your own needs.
-- Feel free to modify the namespace in there as well.
+- Feel free to modify the namespace in there as well. This namespace is where you will your templates from (ie: `app.templates["my-template"](data);`
