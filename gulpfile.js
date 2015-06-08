@@ -16,7 +16,7 @@ gulp.task('templates', function () {
       .pipe(handlebars())
       .pipe(wrap('Handlebars.template(<%= contents %>)'))
       .pipe(declare({
-          namespace: 'hhspike.templates',
+          namespace: 'app.templates',
           noRedeclare: true, // Avoid duplicate declarations
       }))
       .pipe(concat('production-templates.js'))
